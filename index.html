@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
+
   <body>
+
     <header>
       <nav class="naviganion">
         <ul class="naviganion-list">
-          <a href="#" class="naviganion-link header-logo">
-            <img src="#" height="" width="">
+          <a href="#" class="header-logo">
+            <img src="#" alt="Логотип Седона">
           </a>
           <li class="naviganion-link">
             <a href="#" class="active">Главная</a>
@@ -18,7 +21,7 @@
             <a href="#">О Седоне</a>
           </li>
           <li class="naviganion-link">
-            <a href="#">Гостиницы</a>
+            <a href="catalog.html">Гостиницы</a>
           </li>
         </ul>
         <ul class="naviganion-list naviganion-user">
@@ -29,17 +32,95 @@
           </li >
           <li class="naviganion-item">
             <a href="#">
-              <span class="visually-hidden">Желаемое</span>
+              <span class="visually-hidden">Избранное</span>
             </a>
           </li>
           <li class="naviganion-item button">
-            <a href="#">Хочу сюда</a>
+            <button class="button-search button" type="button">
+              <span>Хочу сюда</span>
+            </button>
           </li>
         </ul>
       </nav>
     </header>
+
+    <main class="main-index">
+      <h1 class="visually-hidden">Седона</h1>
+      <img src="#" alt="Горы Седоны">
+      <p class="slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+      <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+      <section class="advantages">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <ul class="advantages-list">
+          <li class="advantages-list-item">
+            <h3 class="advantages-list-title">Настоящий городок</h3>
+            <p class="description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <img src="#" alt="Цветы на фоне дома в Седоне">
+          </li>
+          <li class="advantages-list-item">
+            <h3 class="advantages-list-title">Небольшая площадь</h3>
+            <p class="description">Все достопримечательности находятся очень близко</p>
+          </li>
+          <li class="advantages-list-item">
+            <h3 class="advantages-list-title">Красивая дорога</h3>
+            <p class="description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </li>
+          <li class="advantages-list-item">
+            <h3 class="advantages-list-title">Мало туристов</h3>
+            <p class="description">Большинство едет в Гранд Каньон и толпится там</p>
+          </li>
+          <li class="advantages-list-item">
+            <h3 class="advantages-list-title">Там есть мост Дьявола</h3>
+            <p class="description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            <img src="#" alt="Мост Дьявола в Седоне">
+          </li>
+        </ul>
+      </section>
+
+      <article class="options">
+        <p>Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
+        <p>Опытный персонал и качественное обслуживание!</p>
+        <ul class="option-list">
+          <li class="option-list-item">
+            <h3>Жильё</h3>
+            <p class="description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </li>
+          <li class="option-list-item">
+            <h3>Еда</h3>
+            <p class="description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+          </li>
+          <li class="option-list-item">
+            <h3>Сувениры</h3>
+            <p class="description">Не только китайского, но и настоящего местного производства!</p>
+          </li>
+        </ul>
+      </article>
+      <section class="section-search">
+        <h2 class="section-search-title">Заинтересовались?</h2>
+        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <button class="button-search button" type="button">
+          <span>ПОИСК ГОСТИНИЦЫ В седоне</span>
+        </button>
+      </section>
+
+      <section class="section-distribution">
+        <label for="distribution-email">
+          <h2 class="section-distribution-title">Подпишитесь на рассылку</h2>
+        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+        </label>
+        <form class="distribution-form" action="https://echo.htmlacademy.ru/" method="post">
+          <!-- можно ли обернуть в label заголовок, что бы при нажатии на него переносился курсор на поле ввода? -->
+          <input class="field"  placeholder="Ваш e-mail" type="email" name="distribution-email" id="distribution-email" required>
+          <button class="button button-distribution" type="submit">
+            Подписаться
+          </button>
+      </section>
+
+    </main>
+
     <footer>
 
     </footer>
+
   </body>
 </html>
