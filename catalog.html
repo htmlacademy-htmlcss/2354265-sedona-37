@@ -59,7 +59,7 @@
         </ul>
       </header>
 
-      <section class="section-filter">
+      <section class="catalog">
         <h2 class="visually-hidden">Список с фильтрами</h2>
         <!--Начало формы с фильтрами-->
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
@@ -106,17 +106,16 @@
           <button class="button" type="submit">Показать</button>
           <button class="button button-reset" type="reset">Сбросить</button>
         </form>
-      </section>
 
-      <section class="catalog">
         <h2 class="catalog-title">Найдено гостиниц: 38</h2>
+
         <!--Сортировка-->
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвое</option>
           <option value="popular">Сначала популярное</option>
         </select>
 
-        <!--Кнопки переключения вида-->
+        <!--Кнопки переключения вида--> <!--Список или отдельные кнопки?-->
         <ul class="button-list">
           <li class="button-list-item">
             <button class="button-card-active" type="button">
@@ -134,7 +133,115 @@
             </button>
           </li>
         </ul>
+
+        <!--Карточки товаров-->
+        <ul class="card-list">
+          <li class="card-list-item">
+            <a class="card-list-link" href="#">
+            <img src="#" alt="Звёздное небо из горного колодца в Amara Resort & Spa">
+            <h3 class="card-list-title">Amara Resort & Spa</h3>
+            </a>
+            <p class="card-price">
+              <span class="name">Гостиница<span>
+              <span class="price">От 4000 ₽<span>
+            </p>
+            <a class="more" href="">Подробнее</a>
+            <button class="button button-favorites" type="button">
+              <span>В Избранное</span>
+            </button>
+            <span class="visually-hidden">Уровень рейтинга</span>
+            <span class="rating">Рейтинг: 8,5</span>
+          </li>
+
+          <li class="card-list-item">
+            <a class="card-list-link" href="#">
+            <img src="#" alt="Горная гряда и радуга в Villas at Poco Diablo">
+            <h3 class="card-list-title">Villas at Poco Diablo</h3>
+            </a>
+            <p class="card-price">
+              <span class="name">Гостиница<span>
+              <span class="price">От 5000 ₽<span>
+            </p>
+            <a class="more" href="">Подробнее</a>
+            <button class="button button-favorites button-active" type="button">
+              <span>В Избранном</span>
+            </button>
+            <span class="visually-hidden">Уровень рейтинга</span>
+            <span class="rating">Рейтинг: 9,2</span>
+          </li>
+
+          <li class="card-list-item">
+            <a class="card-list-link" href="#">
+            <img src="#" alt="Гора на фоне восхода в Desert Quail Inn">
+            <h3 class="card-list-title">Desert Quail Inn</h3>
+            </a>
+            <p class="card-price">
+              <span class="name">Гостиница<span>
+              <span class="price">От 2500 ₽<span>
+            </p>
+            <a class="more" href="">Подробнее</a>
+            <button class="button button-favorites" type="button">
+              <span>В Избранное</span>
+            </button>
+            <span class="visually-hidden">Уровень рейтинга</span>
+            <span class="rating">Рейтинг: 6,9</span>
+          </li>
+
+          <li class="card-list-item">
+            <a class="card-list-link" href="#">
+            <img src="#" alt="Горы на фоне звёздного неба в GreenTree Inn">
+            <h3 class="card-list-title">GreenTree Inn</h3>
+            </a>
+            <p class="card-price">
+              <span class="name">Гостиница<span>
+              <span class="price">От 1500 ₽<span>
+            </p>
+            <a class="more" href="">Подробнее</a>
+            <button class="button button-favorites" type="button">
+              <span>В Избранное</span>
+            </button>
+            <span class="visually-hidden">Уровень рейтинга</span>
+            <span class="rating">Рейтинг: 5,0</span>
+          </li>
+
+        </ul>
+
+        <!--Пагинация-->
+        <ul class="pagination-list">
+          <li class="pagination-item pagination-active">
+            <a class="pagination-link">1</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link">2</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link">3</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link">4</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link">...</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link pagination-last">10</a>
+          </li>
+        </ul>
       </section>
+
+      <section class="section-distribution">
+        <label for="distribution-email">
+          <h2 class="section-distribution-title">Подпишитесь на рассылку</h2>
+          <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+        </label>
+        <form class="distribution-form" action="https://echo.htmlacademy.ru/" method="post">
+          <!-- можно ли обернуть в label заголовок, что бы при нажатии на него переносился курсор на поле ввода? -->
+          <input class="field"  placeholder="Ваш e-mail" type="email" name="distribution-email" id="distribution-email" required>
+          <button class="button button-distribution" type="submit">
+            Подписаться
+          </button>
+      </section>
+      
     </main>
 
     <footer>
