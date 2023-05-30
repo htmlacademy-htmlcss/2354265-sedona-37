@@ -11,7 +11,7 @@
     <header>
       <nav class="naviganion">
         <ul class="naviganion-list">
-          <a href="#" class="header-logo">
+          <a href="index.html" class="header-logo">
             <img src="#" alt="Логотип Седона">
           </a>
           <li class="naviganion-link">
@@ -44,8 +44,97 @@
       </nav>
     </header>
 
-    <main>
+    <main class="main-catalog">
+      <header class="main-catalog-header">
+        <h1 class="main-catalog-title">Гостиницы Седоны</h1>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs-item">
+            <a href="index.html" class="breadcrumbs-link">
+              <span class="visually-hidden">Главная</span>
+            </a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link">Гостиницы</a>
+          </li>
+        </ul>
+      </header>
 
+      <section class="section-filter">
+        <h2 class="visually-hidden">Список с фильтрами</h2>
+        <!--Начало формы с фильтрами-->
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+
+          <!--Форма с Инфраструктурой-->
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Инфраструктура:</legend>
+            <ul>
+              <li>
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="pool" checked>Бассейн</label>
+              </li>
+              <li>
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="parking" checked>Парковка</label>
+              </li>
+              <li>
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="Wi-Fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <!--Форма с Типом Жилья-->
+          <fieldset>
+            <legend class="catalog-filter-title">Тип Жилья:</legend>
+            <ul>
+              <li>
+                <label class="control">
+                  <input class="control-input" type="radio" name="housing" value="hotel" checked>Гостиница</label>
+              </li>
+              <li>
+                <label class="control">
+                  <input class="control-input" type="radio" name="housing" value="motel">Мотель</label>
+              </li>
+              <li>
+                <label class="control">
+                  <input class="control-input" type="radio" name="housing" value="apartments">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <!--Кнопки-->
+          <button class="button" type="submit">Показать</button>
+          <button class="button button-reset" type="reset">Сбросить</button>
+        </form>
+      </section>
+
+      <section class="catalog">
+        <h2 class="catalog-title">Найдено гостиниц: 38</h2>
+        <!--Сортировка-->
+        <select class="select-control" aria-label="Сортировка">
+          <option value="cheap">Сначала дешёвое</option>
+          <option value="popular">Сначала популярное</option>
+        </select>
+
+        <!--Кнопки переключения вида-->
+        <ul class="button-list">
+          <li class="button-list-item">
+            <button class="button-card-active" type="button">
+              <span class="visually-hidden">Карточки</span>
+            </button>
+          </li>
+          <li class="button-list-item">
+            <button class="button-card-description" type="button">
+              <span class="visually-hidden">Карточка с описанием</span>
+            </button>
+          </li>
+          <li class="button-list-item">
+            <button class="button-list" type="button">
+              <span class="visually-hidden">Список</span>
+            </button>
+          </li>
+        </ul>
+      </section>
     </main>
 
     <footer>
