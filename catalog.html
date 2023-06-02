@@ -9,6 +9,7 @@
   <body>
 
     <header>
+
       <nav class="naviganion">
         <a href="index.html" class="header-logo">
           <img src="#" alt="Логотип Седона">
@@ -42,9 +43,11 @@
           </li>
         </ul>
       </nav>
+      
     </header>
 
     <main class="main-catalog">
+
       <header class="main-catalog-header">
         <h1 class="main-catalog-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -62,7 +65,7 @@
       <section class="catalog">
         <h2 class="visually-hidden">Список с фильтрами</h2>
         <!--Начало формы с фильтрами-->
-        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="post">
 
           <!--Форма с Инфраструктурой-->
           <fieldset class="catalog-filter-group">
@@ -107,7 +110,12 @@
           <button class="button button-reset" type="reset">Сбросить</button>
         </form>
 
-        <h2 class="catalog-title">Найдено гостиниц: 38</h2>
+        <h2 class="catalog-title">
+          Найдено гостиниц:
+          <span class="results-search">
+            38
+          </span>
+        </h2>
 
         <!--Сортировка-->
         <select class="select-control" aria-label="Сортировка">
@@ -149,6 +157,11 @@
             <button class="button button-favorites" type="button">
               <span>В Избранное</span>
             </button>
+            <p class="rating-stars">
+              <span class="visually-hidden">
+                Четыре звезды
+              </span>
+            </p>
             <span class="visually-hidden">Уровень рейтинга</span>
             <span class="rating">Рейтинг: 8,5</span>
           </li>
@@ -166,6 +179,11 @@
             <button class="button button-favorites button-active" type="button">
               <span>В Избранном</span>
             </button>
+            <p class="rating-stars">
+              <span class="visually-hidden">
+                Четыре звезды
+              </span>
+            </p>
             <span class="visually-hidden">Уровень рейтинга</span>
             <span class="rating">Рейтинг: 9,2</span>
           </li>
@@ -183,6 +201,11 @@
             <button class="button button-favorites" type="button">
               <span>В Избранное</span>
             </button>
+            <p class="rating-stars">
+              <span class="visually-hidden">
+                Три звезды
+              </span>
+            </p>
             <span class="visually-hidden">Уровень рейтинга</span>
             <span class="rating">Рейтинг: 6,9</span>
           </li>
@@ -200,6 +223,11 @@
             <button class="button button-favorites" type="button">
               <span>В Избранное</span>
             </button>
+            <p class="rating-stars">
+              <span class="visually-hidden">
+                Две звезды
+              </span>
+            </p>
             <span class="visually-hidden">Уровень рейтинга</span>
             <span class="rating">Рейтинг: 5,0</span>
           </li>
@@ -263,10 +291,10 @@
       </ul>
       <address class="footer-contact-address">
         <a href="tel:+78128121212">+7 (812) 812-12-12</a>
-      </address>
         <a href="https://htmlacademy.ru/">
           <img class="footer-logo" src="#" alt="Логотип html.Academy">
         </a>
+      </address>
     </footer>
 
   </body>
