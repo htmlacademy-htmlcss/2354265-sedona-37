@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -35,7 +36,7 @@
           <li class="naviganion-item">
             <a href="#">
               <span class="visually-hidden">Избранное</span>
-              <img src="images/favorites.svg" >
+              <img src="images/favorites.svg" height="18" width="17" alt="Иконка избранное">
             </a>
           </li>
           <li class="naviganion-item button">
@@ -115,9 +116,15 @@
         </button>
       </section>
 
+    </main>
+
+    <footer>
+
+      <!--Подписка-->
+
       <section class="section-distribution">
-          <h2 class="section-distribution-title">Подпишитесь на рассылку</h2>
-          <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <h2 class="section-distribution-title">Подпишитесь на рассылку</h2>
+        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="distribution-form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="field"  placeholder="Ваш e-mail" type="email" name="distribution-email" id="distribution-email" required>
           <button class="button button-distribution" type="submit">
@@ -126,36 +133,34 @@
         </form>
       </section>
 
-    </main>
-
-    <footer>
-
-      <ul class="footer-contact-list">
-        <li class="footer-contact-item">
-          <a href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">Vkontakte</span>
-            <img src="images/vkontacte.svg" width="24" height="14">
+      <div class="container-address">
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <a href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Vkontakte</span>
+              <img src="images/vkontacte.svg" width="24" height="14" alt="Vkontakte">
+            </a>
+          </li>
+          <li class="footer-contact-item">
+            <a href="https://t.me/htmlacademy ">
+              <span class="visually-hidden">Telegram</span>
+              <img src="images/telegramm.svg" width="18" height="15" alt="Telegram">
+            </a>
+          </li>
+          <li class="footer-contact-item">
+            <a href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Youtube</span>
+              <img src="images/youtube.svg" width="22" height="17" alt="Youtube">
+            </a>
+          </li>
+        </ul>
+        <address class="footer-contact-address">
+          <a href="tel:+78128121212">+7 (812) 812-12-12</a>
+          <a href="https://htmlacademy.ru/">
+            <img class="footer-logo" src="images/html-academy.svg" width="115" height="33" alt="Логотип html.Academy">
           </a>
-        </li>
-        <li class="footer-contact-item">
-          <a href="https://t.me/htmlacademy ">
-            <span class="visually-hidden">Telegram</span>
-            <img src="images/telegramm.svg" width="18" height="15">
-          </a>
-        </li>
-        <li class="footer-contact-item">
-          <a href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">Youtube</span>
-            <img src="images/youtube.svg" width="22" height="17">
-          </a>
-        </li>
-      </ul>
-      <address class="footer-contact-address">
-        <a href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a href="https://htmlacademy.ru/">
-          <img class="footer-logo" src="images/html-academy.svg" width="115" height="33" alt="Логотип html.Academy">
-        </a>
-      </address>
+        </address>
+      </div>
 
     </footer>
 
