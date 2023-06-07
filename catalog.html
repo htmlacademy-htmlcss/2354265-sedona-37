@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -14,33 +15,33 @@
         <a href="#" class="header-logo">
           <img src="images/logo.svg" width="140" height="70" alt="Логотип Седона">
         </a>
-        <ul class="naviganion-list">
-          <li class="naviganion-link">
-            <a href="index.html" class="active">Главная</a>
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a href="index.html" class="navigation-link active">Главная</a>
           </li>
-          <li class="naviganion-link">
-            <a href="#">О Седоне</a>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">О Седоне</a>
           </li>
-          <li class="naviganion-link">
-            <a href="catalog.html">Гостиницы</a>
+          <li class="navigation-item">
+            <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="naviganion-list naviganion-user">
-          <li class="naviganion-item">
-            <a href="#">
+        <ul class="navigation-list navigation-user">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
               <span class="visually-hidden">Поиск</span>
               <img src="images/search.svg" height="18" width="18" alt="Иконка поиска">
             </a>
           </li >
-          <li class="naviganion-item">
-            <a href="#">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
               <span class="visually-hidden">Избранное</span>
               <img src="images/favorites.svg" height="18" width="17" alt="Иконка избранное">
             </a>
           </li>
-          <li class="naviganion-item button">
+          <li class="navigation-item">
             <button class="button-search button" type="button">
-              <span>Хочу сюда</span>
+              Хочу сюда
             </button>
           </li>
         </ul>
@@ -49,6 +50,9 @@
     </header>
 
     <main class="main-catalog">
+
+      <!--Обёртка фильтров-->
+      <div class="container-main-image">
 
       <header class="main-catalog-header">
         <h1 class="main-catalog-title">Гостиницы Седоны</h1>
@@ -66,13 +70,14 @@
 
       <section class="catalog">
         <h2 class="visually-hidden">Список с фильтрами</h2>
+
         <!--Начало формы с фильтрами-->
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="post">
 
           <!--Форма с Инфраструктурой-->
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
-            <ul>
+            <ul class="filter-list">
               <li>
                 <label class="control">
                   <input class="control-input" type="checkbox" name="pool" checked>Бассейн</label>
@@ -89,9 +94,9 @@
           </fieldset>
 
           <!--Форма с Типом Жилья-->
-          <fieldset>
+          <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Тип Жилья:</legend>
-            <ul>
+            <ul class="filter-list">
               <li>
                 <label class="control">
                   <input class="control-input" type="radio" name="housing" value="hotel" checked>Гостиница</label>
@@ -107,12 +112,17 @@
             </ul>
           </fieldset>
 
+          <!--Форма с стоимостью-->
+
           <!--Кнопки-->
-          <button class="button" type="submit">Показать</button>
+          <button class="button button-apply" type="submit">Применить</button>
           <button class="button button-reset" type="reset">Сбросить</button>
         </form>
 
-        <h2 class="catalog-title">
+      </div>
+
+      <div class="output-wrapper">
+        <h2 class="catalog-title caption">
           Найдено гостиниц:
           <span class="results-search">
             38
@@ -146,6 +156,7 @@
             </button>
           </li>
         </ul>
+      </div>
 
         <!--Карточки товаров-->
         <ul class="card-list">
@@ -242,22 +253,22 @@
         <!--Пагинация-->
         <ul class="pagination-list">
           <li class="pagination-item pagination-active">
-            <a class="pagination-link">1</a>
+            <a class="pagination-link" href="#">1</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link">2</a>
+            <a class="pagination-link" href="#">2</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link">3</a>
+            <a class="pagination-link" href="#">3</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link">4</a>
+            <a class="pagination-link" href="#">4</a>
           </li>
           <li class="pagination-item">
             ...
           </li>
-          <li class="pagination-item">
-            <a class="pagination-link pagination-last">10</a>
+          <li class="pagination-item pagination-last">
+            <a class="pagination-link"  href="#">10</a>
           </li>
         </ul>
       </section>
@@ -267,9 +278,8 @@
     <footer>
 
       <!--Подписка-->
-
-      <section class="section-distribution">
-        <h2 class="section-distribution-title">Подпишитесь на рассылку</h2>
+      <section class="section-distribution catalog-distribution">
+        <h2 class="section-distribution-title caption">Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="distribution-form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="field"  placeholder="Ваш e-mail" type="email" name="distribution-email" id="distribution-email" required>
@@ -279,22 +289,23 @@
         </form>
       </section>
 
-      <div class="container-address">
+      <!--Блок с контактами-->
+      <section class="container-address">
         <ul class="footer-contact-list">
           <li class="footer-contact-item">
-            <a href="https://vk.com/htmlacademy">
+            <a class="footer-contact-link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Vkontakte</span>
               <img src="images/vkontacte.svg" width="24" height="14" alt="Vkontakte">
             </a>
           </li>
           <li class="footer-contact-item">
-            <a href="https://t.me/htmlacademy ">
+            <a class="footer-contact-link" href="https://t.me/htmlacademy ">
               <span class="visually-hidden">Telegram</span>
               <img src="images/telegramm.svg" width="18" height="15" alt="Telegram">
             </a>
           </li>
           <li class="footer-contact-item">
-            <a href="https://www.youtube.com/user/htmlacademyru">
+            <a class="footer-contact-link" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Youtube</span>
               <img src="images/youtube.svg" width="22" height="17" alt="Youtube">
             </a>
@@ -302,11 +313,11 @@
         </ul>
         <address class="footer-contact-address">
           <a href="tel:+78128121212">+7 (812) 812-12-12</a>
-          <a href="https://htmlacademy.ru/">
-            <img class="footer-logo" src="images/html-academy.svg" width="115" height="33" alt="Логотип html.Academy">
-          </a>
         </address>
-      </div>
+        <a class="footer-contact-link" href="https://htmlacademy.ru/">
+          <img class="footer-logo" src="images/html-academy.svg" width="115" height="33" alt="Логотип html.Academy">
+        </a>
+      </section>
 
     </footer>
 
