@@ -17,30 +17,59 @@
 
 /*body*/
 
+.container-body {
+  -webkit-box-shadow: 0p 0 8px 7px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0 0 8px 7px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 0 8px 7px rgba(0, 0, 0, 0.09);
+
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body {
   margin: 0;
   padding: 0;
 
-  width: 1200px;
-
   font-family: "PT sans", sans-serif;
+  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+
   color: #333333;
   background-color: #FFFFFF;
+}
 
-  box-shadow: 5px 0 5px;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /*Header*/
+.naviganion {
+  display: flex;
+}
+
+.navigation-list {
+  display: flex;
+}
+
 .navigation-item {
   list-style: none;
+  justify-content: space-between;
 }
 
 .navigation-link {
   text-decoration: none;
 
-  font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -54,7 +83,6 @@ body {
 .button {
   border-radius: 4px;
 
-  font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -76,23 +104,16 @@ body {
 .hero {
   background-image: url(../images/background/hero-background.jpg);
   background-repeat: no-repeat;
-  background-color: blue;
-  width: 100%;
-  height: auto;
-}
+  background-color: blue inherit;
 
-.hero-logo {
-  height: 352px;
+  padding-top:51px;
+  padding-bottom: 82px;
 
-  display: block;
-
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
 }
 
 /*Заголовочный текст в секциях*/
 .caption {
-  font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -103,10 +124,8 @@ body {
   text-transform: uppercase;
 }
 
-/*Текст с описанием под заголовочным текстом*/
+/*Текст с описанием подзаголовочным текстом*/
 .main-description {
-  font-family: 'PT Sans', sans-serif;
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
 
@@ -114,11 +133,14 @@ body {
 }
 
 .advantages-list {
+  margin: 0;
+  padding: 0;
+
   list-style:none;
 }
 
 .advantages-list-title {
-  font-family: 'PT Sans', sans-serif;
+
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -128,20 +150,39 @@ body {
   text-transform: uppercase;
 }
 
+.advantages-list-item {
+  margin-top: 102px;
+  margin-bottom: 102px;
+}
+
 .distinguish {
   background-color: #82B3D3;
   color: #FFFFFF;
+
+  display: flex;
+
+  align-items: center;
 }
 
 .advantages-list img {
   display: block;
 }
 
-.option-list-item {
-  list-style: none;
+.option-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
 }
 
-.section-search .button-section-search{
+.option-list-item {
+  list-style: none;
+
+  width: 400px;
+  text-align: center;
+}
+
+.section-search .button-section-search {
   font-size: 20px;
   line-height: 36px;
 
@@ -153,16 +194,11 @@ body {
 
 /*Блок подписки*/
 .section-distribution {
+  padding-top: 96px;
+  padding-bottom: 105px;
 
-  width: auto;
-  height: 415px;
-  display: block;
-
-  font-family: 'PT Sans', sans-serif;
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-
 
   text-align: center;
 }
@@ -193,8 +229,6 @@ body {
   text-decoration: none;
   color: #000000;
 
-  font-family: 'PT Sans', sans-serif;
-  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
 
@@ -204,9 +238,7 @@ body {
 /*отдел с номером*/
 .footer-contact-address a {
   text-decoration: none;
-  font-family: 'PT Sans', sans-serif;
-  font-style: normal;
-  font-weight: 400;
+
   font-size: 40px;
   line-height: 40px;
 
