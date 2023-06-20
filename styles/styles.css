@@ -66,10 +66,21 @@ body {
 /*Header*/
 .navigation {
   margin: 0 auto;
-  width: 1060px;
+  padding: 0 70px;
+  height: 60px;
 
   display: flex;
 }
+
+/*
+.header-logo {
+  position: relative;
+}
+.header-logo img {
+  position: absolute;
+  height: 70px;
+}
+*/
 
 .header-logo {
   width: 140px;
@@ -78,7 +89,9 @@ body {
 
 .navigation-list {
   padding: 0;
-
+/* Если делать через position: relative раскомментировать
+  margin-left: 184px;
+*/
   width: 360px;
 
   display: flex;
@@ -152,6 +165,8 @@ body {
   padding-bottom: 82px;
 
   text-align: center;
+
+  margin-bottom: 69px;
 }
 
 /*Заголовочный текст в секциях*/
@@ -166,13 +181,25 @@ body {
   text-transform: uppercase;
 }
 
+.slogan-description {
+  margin-top: 0;
+}
+
 /*Текст с описанием подзаголовочным текстом*/
 .main-description {
   font-size: 22px;
   line-height: 26px;
 
   text-align: center;
+
+  margin-top: 25px;
+  padding-bottom: 70px;
 }
+
+.main-slogan {
+  margin-bottom: 20px;
+}
+
 
 .advantages-list {
   margin: 0;
@@ -184,12 +211,7 @@ body {
   flex-wrap: wrap;
 }
 
-.color {
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
 .advantages-list-title {
-
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -200,8 +222,14 @@ body {
 }
 
 .advantages-list-item {
-  margin-top: 102px;
-  margin-bottom: 102px;
+  width: 400px;
+
+  padding: 112.5px 85px;
+  box-sizing: border-box;
+}
+
+.color {
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .distinguish {
@@ -209,12 +237,25 @@ body {
   color: #FFFFFF;
 
   display: flex;
-
   align-items: center;
+
+  width:1200px;
+  padding: 0;
 }
 
 .advantages-list img {
   display: block;
+}
+
+.wrapper-options {
+  padding:64px 350px;
+}
+
+.wrapper-options p {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  text-align: center;
 }
 
 .option-list {
@@ -229,13 +270,32 @@ body {
 
   width: 400px;
   text-align: center;
+
+  padding: 81px 85px;
+}
+
+.option-list-item h3 {
+  margin: 30px 0;
+}
+
+.option-list .description {
+  margin: 0;
+}
+
+.section-search {
+  padding: 96px 0;
 }
 
 .section-search .button-section-search {
+  display: block;
+
   font-size: 20px;
   line-height: 36px;
 
   padding: 8px 50px;
+  margin-left: auto;
+  margin-right: auto;
+
   background: #756157;
 }
 
@@ -243,13 +303,32 @@ body {
 
 /*Блок подписки*/
 .section-distribution {
-  padding-top: 96px;
-  padding-bottom: 105px;
+  padding: 96px 258px 105px 258px;
 
   font-size: 22px;
   line-height: 26px;
 
   text-align: center;
+}
+
+.section-distribution-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.section-distribution p {
+  margin-top: 0;
+  margin-bottom: 54px;
+}
+
+.section-search .section-search-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.section-search .main-description {
+  margin-top: 0;
+  margin-bottom: 54px;
 }
 
 .distribution-form {
@@ -295,18 +374,20 @@ body {
 
 .container-address {
   width: 1060px;
-  margin: 0 auto;
+  padding: 50px 65px 40px 75px;
 
   display: flex;
+  justify-content: space-between;
 }
 
 .footer-contact-list {
   padding: 0;
+  margin: 0;
+
+  width: 140px;
 
   display: flex;
   justify-content: space-between;
-
-  width: 140px;
 }
 
 .footer-contact-item {
@@ -326,7 +407,8 @@ body {
 
 .footer-contact-address {
   width: 720px;
-  display: block;
+
+  text-align: center;
 }
 
 .footer-contact-address a {
@@ -341,6 +423,11 @@ body {
   color: #000000;
 }
 
+.footer-contact-link .footer-logo {
+  width: 150px;
+  margin-right: auto;
+}
+
 /*Каталог*/
 
 .container-main-image {
@@ -353,12 +440,17 @@ body {
   height: auto;
 
   color: #FFFFFF;
+
+  padding: 35px 70px 75px 70px;
+  box-sizing: border-box;
 }
 
 .main-catalog-title {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
+
+  margin: 0;
 }
 
 /*Крошки*/
@@ -419,12 +511,20 @@ input {
   padding: 8px 50px;
 }
 
-.output-wrapper {
+.search-hotel {
   width: 1060px;
   margin: 0 auto;
+}
+
+.output-wrapper {
+  margin: 50px auto 40px auto;
 
   display: flex;
   justify-content: space-between;
+}
+
+.output-wrapper h2 {
+  margin: 0;
 }
 
 .button-list {
@@ -433,6 +533,8 @@ input {
 
   width: 160px;
   gap: 8px;
+
+  margin: 0;
 }
 
 .button-list-button {
@@ -451,11 +553,17 @@ input {
 
 /*Карточки товаров*/
 .card-list {
+  width: 100%;
+
   font-size: 16px;
   line-height: 20px;
 
   display: flex;
   flex-wrap: wrap;
+
+  margin: 0 auto;
+  padding: 0;
+  gap: 20px;
 }
 
 .card-list img {
@@ -476,6 +584,11 @@ input {
   text-align: center;
 
   width: 340px;
+
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+
+  box-sizing: border-box;
 }
 
 .card-list-title {
