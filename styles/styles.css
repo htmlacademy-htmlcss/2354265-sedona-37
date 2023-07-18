@@ -63,24 +63,20 @@ body {
   overflow: hidden;
 }
 
+.cursor {
+  cursor: pointer;
+}
+
 /*Header*/
 .navigation {
   margin: 0 auto;
   padding: 0 70px;
-  height: 60px;
+  height: 64px;
 
   display: flex;
 }
 
-/*
-.header-logo {
-  position: relative;
-}
-.header-logo img {
-  position: absolute;
-  height: 70px;
-}
-*/
+
 
 .header-logo {
   width: 140px;
@@ -89,9 +85,7 @@ body {
 
 .navigation-list {
   padding: 0;
-/* Если делать через position: relative убрать коммент
-  margin-left: 184px;
-*/
+
   width: 360px;
 
   display: flex;
@@ -130,6 +124,43 @@ body {
   min-height: 64px;
 }
 
+.navigation-user-item {
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding: 22px 12px;
+}
+
+.search {
+  background-image: url("../images/search.svg");
+}
+
+.favorites {
+  background-image: url("../images/favorites.svg");
+
+  position: relative;
+}
+
+.favorites-quantity {
+  font-size: 10px;
+  color: #ffffff;
+
+  position: absolute;
+  content: " ";
+
+  background-color: #7db54f;
+
+  width: 20px;
+  height: 20px;
+
+  left: 11px;
+  top: 11px;
+
+  border-radius: 50%;
+
+  text-align: center;
+}
+
 /*Кнопки поиска*/
 
 .button {
@@ -147,8 +178,6 @@ body {
   text-transform: uppercase;
 
   color: #FFFFFF;
-
-
 }
 
 .button-search {
@@ -164,16 +193,23 @@ body {
 }
 
 .hero {
-  background-image: url(../images/background/hero-background.jpg);
+  background-image:url(../images/background/hero-line.svg), url(../images/background/hero-background.jpg) ;
   background-repeat: no-repeat;
+  background-position: bottom;
   background-color: blue inherit;
 
-  padding-top:51px;
-  padding-bottom: 82px;
+  width: 100%;
+  height: 485px;
 
   text-align: center;
+}
 
-  margin-bottom: 69px;
+.hero-logo {
+  padding-top:51px;
+
+  width: 458px;
+  height: 352px;
+
 }
 
 /*Заголовочный текст в секциях*/
@@ -189,7 +225,8 @@ body {
 }
 
 .slogan-description {
-  margin-top: 0;
+  margin: 0;
+  padding-top: 69px;
 }
 
 /*Текст с описанием подзаголовочным текстом*/
@@ -200,14 +237,12 @@ body {
   text-align: center;
 
   margin-top: 25px;
-  padding-bottom: 70px;
+
 }
 
-.main-slogan {
-  margin-bottom: 20px;
+.advantages {
+  padding-top: 69px;
 }
-
-
 .advantages-list {
   margin: 0;
   padding: 0;
@@ -225,21 +260,44 @@ body {
   font-size: 24px;
   line-height: 28px;
 
+  margin-bottom: 30px;
+
 
   text-align: center;
   text-transform: uppercase;
-}
-/*
-.advantages-list-item {
-  width: 400px;
-  height: 385px;
 
-  padding: 0 85px;
-
-  box-sizing: border-box;
-  text-align: center;
+  position: relative;
 }
-*/
+
+.distinguish h3::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: -30px;
+  width: 60px;
+  height: 2px;
+  background-color: #ffffff;
+  opacity: 30%;
+  transform: translateX(-50%);
+}
+
+.black h3::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: -30px;
+  width: 60px;
+  height: 2px;
+  background-color: #000000;
+  opacity: 30%;
+  transform: translateX(-50%);
+}
+
+.container-advantages-list-item .description {
+  margin-top: 30px;
+}
+
+
 
 .container-advantages-list-item {
   padding: 0 85px;
@@ -272,20 +330,25 @@ body {
   padding: 0;
 }
 
+.reverse {
+  order: 1;
+}
+
 .advantages-list img {
   display: block;
 }
 
 /*Блок с опциями*/
+
 .wrapper-options {
   padding:64px 350px;
-}
-
-.wrapper-options p {
-  margin-top: 0;
-  margin-bottom: 20px;
 
   text-align: center;
+}
+
+.wrapper-options .options-description {
+  font-size: 22px;
+  margin: 0;
 }
 
 .option-list {
@@ -301,11 +364,51 @@ body {
   width: 400px;
   text-align: center;
 
-  padding: 81px 85px;
+  padding: 80px 85px;
 }
 
 .option-list-item h3 {
-  margin: 30px 0;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+
+  margin-top: 105px;
+  margin-bottom: 30px;
+
+  position: relative;
+}
+
+.house h3::before {
+  position: absolute;
+  content: " ";
+  background-image: url(../images/house.svg);
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 72px;
+  top: -100px;
+  left: 80px;
+}
+
+.food h3::before {
+  position: absolute;
+  content: " ";
+  background-image: url(../images/food.svg);
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 72px;
+  top: -100px;
+  left: 80px;
+}
+
+.present h3::before {
+  position: absolute;
+  content: " ";
+  background-image: url(../images/present.svg);
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 76px;
+  top: -100px;
+  left: 80px;
 }
 
 .option-list .description {
@@ -352,6 +455,7 @@ body {
   line-height: 26px;
 
   text-align: center;
+
 }
 
 .section-distribution-title {
@@ -362,6 +466,11 @@ body {
 .section-distribution p {
   margin-top: 0;
   margin-bottom: 54px;
+}
+
+.distribution-form {
+  display: flex;
+  justify-content: center;
 }
 
 .field {
@@ -565,17 +674,21 @@ input {
 }
 
 .select-control {
+  font-family: PT Sans;
   font-size: 18px;
   line-height: 21px;
 
-  padding: 14px 131px 14px 20px;
-/*
-  padding-top: 14px;
-  padding-left: 20px;
-  padding-bottom: 14px;
-  padding-right: 131px;
-*/
+  width: 292px;
+  padding: 10px 20px;
   margin-right: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+
+  border-radius: 4px;
+  border: 2px solid var(--forms-elements-1, #E5E5E5);
 }
 
 .button-list {
@@ -732,21 +845,23 @@ input {
 }
 
 .pagination-link {
-  width: 60px;
+  min-width: 60px;
   height: 60px;
 
   background-color: #82B3D3;
   color: #FFFFFF;
 
   text-decoration: none;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   box-sizing: border-box;
-  padding: 11.46px 24.45px;
+  padding: 0 12px;
 
   border: 1px solid black;
   border-radius: 4px;
 
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -757,9 +872,9 @@ input {
   border: 1px solid none;
   border-radius: 4px;
 
-  display: block;
-  box-sizing: border-box;
-  padding: 16.36px 21.45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pagination-active a {

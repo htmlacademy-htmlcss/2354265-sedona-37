@@ -118,8 +118,8 @@
 
             <!--Кнопки-->
             <div class="button-container">
-              <button class="button button-apply" type="submit">Применить</button>
-              <button class="button button-reset" type="reset">Сбросить</button>
+              <button class="button button-apply cursor" type="submit">Применить</button>
+              <button class="button button-reset cursor" type="reset">Сбросить</button>
             </div>
           </form>
 
@@ -136,27 +136,28 @@
               </h2>
 
               <!--Сортировка-->
-              <select class="select-control" aria-label="Сортировка">
-                <option value="cheap">Сначала дешёвое</option>
-                <option value="popular">Сначала популярное</option>
-              </select>
-
+              <div>
+                <select class="select-control" aria-label="Сортировка">
+                  <option value="cheap">Сначала дешёвое</option>
+                  <option value="popular">Сначала популярное</option>
+                </select>
+              </div>
               <!--Кнопки переключения вида-->
               <ul class="button-list">
                 <li class="button-list-item">
-                  <button class="button-list-button button-card-active" type="button">
+                  <button class="button-list-button button-card-active cursor" type="button">
                     <span class="visually-hidden">Карточки</span>
                     <img src="images/cards.svg" width="16" height="14" alt="Карточки">
                   </button>
                 </li>
                 <li class="button-list-item">
-                  <button class="button-list-button button-card-description" type="button">
+                  <button class="button-list-button button-card-description cursor" type="button">
                     <span class="visually-hidden">Карточка с описанием</span>
                     <img src="images/image.svg" width="16" height="14" alt="Карточка с описанием">
                   </button>
                 </li>
                 <li class="button-list-item">
-                  <button class="button-list-button button-roll" type="button">
+                  <button class="button-list-button button-roll cursor" type="button">
                     <span class="visually-hidden">Список</span>
                     <img src="images/list.svg" width="16" height="14" alt="Список">
                   </button>
@@ -180,7 +181,7 @@
                 <a class="more" href="">
                   Подробнее
                 </a>
-                <button class="button button-favorites" type="button">
+                <button class="button button-favorites cursor" type="button">
                   <span>В Избранное</span>
                 </button>
                 <p class="rating-stars">
@@ -206,7 +207,7 @@
                 <a class="more" href="#">
                   Подробнее
                 </a>
-                <button class="button button-favorites button-active" type="button">
+                <button class="button button-favorites button-active cursor" type="button">
                   <span>В Избранном</span>
                 </button>
                 <p class="rating-stars">
@@ -232,7 +233,7 @@
                 <a class="more" href="#">
                   Подробнее
                 </a>
-                <button class="button button-favorites" type="button">
+                <button class="button button-favorites cursor" type="button">
                   <span>В Избранное</span>
                 </button>
                 <p class="rating-stars">
@@ -258,7 +259,7 @@
                 <a class="more" href="#">
                   Подробнее
                 </a>
-                <button class="button button-favorites" type="button">
+                <button class="button button-favorites cursor" type="button">
                   <span>В Избранное</span>
                 </button>
                 <p class="rating-stars">
@@ -308,7 +309,7 @@
           <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="distribution-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="field"  placeholder="Ваш e-mail" type="email" name="distribution-email" id="distribution-email" required>
-            <button class="button button-distribution" type="submit">
+            <button class="button button-distribution cursor" type="submit">
               Подписаться
             </button>
           </form>
