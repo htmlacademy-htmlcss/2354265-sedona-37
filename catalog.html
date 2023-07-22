@@ -76,7 +76,11 @@
           </h1>
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
-              <a href="index.html" class="breadcrumbs-link">
+              <a class="breadcrumbs-link" href="index.html">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.5 0.5L0.5 6.30006V12.5001H12.5V6.30006L6.5 0.5ZM11.5 11.5001H1.5V6.70005L6.5 1.9L11.5 6.70005V11.5001Z" fill="white"/>
+                  <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z" fill="white"/>
+                </svg>
                 <span class="visually-hidden">
                   Главная.
                 </span>
@@ -104,20 +108,23 @@
                 <ul class="filter-list">
                   <li>
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="pool" checked>
-                      Бассейн
+                      <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
+                      <span class="control-mark"></span>
+                      <span>Бассейн</span>
                     </label>
                   </li>
                   <li>
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="parking" checked>
-                      Парковка
+                      <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
+                      <span class="control-mark"></span>
+                      <span>Парковка</span>
                     </label>
                   </li>
                   <li>
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="Wi-Fi">
-                      Wi-Fi
+                      <input class="visually-hidden control-input" type="checkbox" name="Wi-Fi">
+                      <span class="control-mark"></span>
+                      <span>Wi-Fi</span>
                     </label>
                   </li>
                 </ul>
@@ -131,19 +138,22 @@
                 <ul class="filter-list">
                   <li>
                     <label class="control">
-                      <input class="control-input" type="radio" name="housing" value="hotel" checked>
+                      <input class="visually-hidden control-input" type="radio" name="housing" value="hotel" checked>
+                      <span class="control-mark"></span>
                       Гостиница
                     </label>
                   </li>
                   <li>
                     <label class="control">
-                      <input class="control-input" type="radio" name="housing" value="motel">
+                      <input class="visually-hidden control-input" type="radio" name="housing" value="motel">
+                      <span class="control-mark"></span>
                       Мотель
                     </label>
                   </li>
                   <li>
                     <label class="control">
-                      <input class="control-input" type="radio" name="housing" value="apartments">
+                      <input class="visually-hidden control-input" type="radio" name="housing" value="apartments">
+                      <span class="control-mark"></span>
                       Апартаменты
                     </label>
                   </li>
@@ -159,7 +169,7 @@
               <fieldset class="catalog-filter-group">
 
                 <legend class="catalog-filter-title">
-                  Стоимость,₽:
+                  Стоимость, ₽:
                 </legend>
 
                 <div class="range-wrapper-inputs">
@@ -179,7 +189,7 @@
 
                 <div class="range">
                   <div class="range-scale">
-                    <div class="range-bar" style="left: 0; width: 226px">
+                    <div class="range-bar" style="left: 0; width: 220px">
                       <button class="range-toggle toggle-min">
                         <span class="visually-hidden">
                           Изменить минимальную цену.
@@ -273,33 +283,36 @@
                     Amara Resort & Spa
                   </h3>
                 </a>
-                <p class="card-price">
-                  <span class="name">
-                    Гостиница
+                <div>
+                  <p class="card-price">
+                    <span class="name">
+                      Гостиница
+                    </span>
+                    <span class="price">
+                      От 4000 ₽
+                    </span>
+                  </p>
+                </div>
+                <div class="button-wrapper">
+                  <a class="more" href="">
+                    Подробнее
+                  </a>
+                  <button class="button button-favorites cursor" type="button">
+                    <span>
+                      В Избранное
+                    </span>
+                  </button>
+                </div>
+                <div class="rating-wrapper">
+                  <p class="rating-stars rating-stars-level-four">
+                    <span class="visually-hidden">
+                      Четыре звезды.
+                    </span>
+                  </p>
+                  <span class="rating ">
+                    Рейтинг: 8,5
                   </span>
-                  <span class="price">
-                    От 4000 ₽
-                  </span>
-                </p>
-                <a class="more" href="">
-                  Подробнее
-                </a>
-                <button class="button button-favorites cursor" type="button">
-                  <span>
-                    В Избранное
-                  </span>
-                </button>
-                <p class="rating-stars">
-                  <span class="visually-hidden">
-                    Четыре звезды.
-                  </span>
-                </p>
-                <span class="visually-hidden">
-                  Уровень рейтинга.
-                </span>
-                <span class="rating">
-                  Рейтинг: 8,5
-                </span>
+                </div>
               </li>
 
               <li class="card-list-item">
@@ -319,25 +332,26 @@
                     От 5000 ₽
                   </span>
                 </p>
-                <a class="more" href="#">
-                  Подробнее
-                </a>
-                <button class="button button-favorites button-active cursor" type="button">
-                  <span>
-                    В Избранном
+                <div class="button-wrapper">
+                  <a class="more" href="#">
+                    Подробнее
+                  </a>
+                  <button class="button button-favorites button-active cursor" type="button">
+                    <span>
+                      В Избранном
+                    </span>
+                  </button>
+                </div>
+                <div class="rating-wrapper">
+                  <p class="rating-stars rating-stars-level-four">
+                    <span class="visually-hidden">
+                      Четыре звезды.
+                    </span>
+                  </p>
+                  <span class="rating">
+                    Рейтинг: 9,2
                   </span>
-                </button>
-                <p class="rating-stars">
-                  <span class="visually-hidden">
-                    Четыре звезды.
-                  </span>
-                </p>
-                <span class="visually-hidden">
-                  Уровень рейтинга.
-                </span>
-                <span class="rating">
-                  Рейтинг: 9,2
-                </span>
+                </div>
               </li>
 
               <li class="card-list-item">
@@ -357,25 +371,26 @@
                     От 2500 ₽
                   </span>
                 </p>
-                <a class="more" href="#">
-                  Подробнее
-                </a>
-                <button class="button button-favorites cursor" type="button">
-                  <span>
-                    В Избранное
+                <div class="button-wrapper">
+                  <a class="more" href="#">
+                    Подробнее
+                  </a>
+                  <button class="button button-favorites cursor" type="button">
+                    <span>
+                      В Избранное
+                    </span>
+                  </button>
+                </div>
+                <div class="rating-wrapper">
+                  <p class="rating-stars rating-stars-level-three">
+                    <span class="visually-hidden">
+                      Три звезды.
+                    </span>
+                  </p>
+                  <span class="rating">
+                    Рейтинг: 6,9
                   </span>
-                </button>
-                <p class="rating-stars">
-                  <span class="visually-hidden">
-                    Три звезды.
-                  </span>
-                </p>
-                <span class="visually-hidden">
-                  Уровень рейтинга.
-                </span>
-                <span class="rating">
-                  Рейтинг: 6,9
-                </span>
+                </div>
               </li>
 
               <li class="card-list-item">
@@ -393,25 +408,26 @@
                     От 1500 ₽
                   </span>
                 </p>
-                <a class="more" href="#">
-                  Подробнее
-                </a>
-                <button class="button button-favorites cursor" type="button">
-                  <span>
-                    В Избранное
+                <div class="button-wrapper">
+                  <a class="more" href="#">
+                    Подробнее
+                  </a>
+                  <button class="button button-favorites cursor" type="button">
+                    <span>
+                      В Избранное
+                    </span>
+                  </button>
+                </div>
+                <div class="rating-wrapper">
+                  <p class="rating-stars rating-stars-level-two ">
+                    <span class="visually-hidden">
+                      Две звезды.
+                    </span>
+                  </p>
+                  <span class="rating">
+                    Рейтинг: 5,0
                   </span>
-                </button>
-                <p class="rating-stars">
-                  <span class="visually-hidden">
-                    Две звезды.
-                  </span>
-                </p>
-                <span class="visually-hidden">
-                  Уровень рейтинга.
-                </span>
-                <span class="rating">
-                  Рейтинг: 5,0
-                </span>
+                </div>
               </li>
 
             </ul>
@@ -462,7 +478,7 @@
             Подпишитесь на рассылку
           </h2>
           <p>
-            Только полезная информация и никакого спама, честное бойскаутское!
+            Только полезная информация и никакого спама,<br> честное бойскаутское!
           </p>
           <form class="distribution-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="field"  placeholder="Ваш e-mail" type="email" name="distribution-email" id="distribution-email" required>
@@ -473,7 +489,7 @@
         </section>
 
           <!--Блок с контактами-->
-          <section class="container-address">
+          <div class="container-address">
             <ul class="footer-contact-list">
               <li class="footer-contact-item">
                 <a class="footer-contact-link" href="https://vk.com/htmlacademy">
@@ -519,7 +535,7 @@
                 Сайт HTML-Академия.
               </span>
             </a>
-          </section>
+          </div>
 
       </footer>
 

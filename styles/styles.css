@@ -35,7 +35,6 @@ body {
 
   min-width: 100%;
   display: flex;
-  flex-direction: column;
 }
 
 .container-body {
@@ -211,7 +210,7 @@ body {
   background-image:url(../images/background/hero-line.svg), url(../images/background/hero-background.jpg) ;
   background-repeat: no-repeat;
   background-position: bottom;
-  background-color: blue inherit;
+  background-color: rgba(131, 179, 211, 1);
 
   width: 100%;
   height: 485px;
@@ -510,7 +509,7 @@ body {
 
 .index-distribution {
   background-image: url(../images/background/background-subscribe.jpg);
-  background-color: blue;
+  background-color: rgba(131, 179, 211, 1);
 
   color:#FFFFFF;;
 }
@@ -586,12 +585,260 @@ body {
   color: #000000;
 }
 
+/*Модальное окно*/
+
+.modal-container {
+  position: fixed;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  background-color: rgba(242, 242, 242, 0.80);
+
+  display: flex;
+}
+
+.modal {
+  position: relative;
+
+  margin: auto;
+  padding: 64px 70px;
+
+  background: #FFF;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+
+  box-sizing: border-box;
+}
+
+.modal-search-hotel {
+  width: 717px;
+}
+
+.modal-search-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 48px;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.modal-closed-button {
+  position: absolute;
+  padding: 0;
+
+  top: 63px;
+  right: 51px;
+
+  width: 52px;
+  height: 52px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-image: url("../images/modal/modal-closed.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F2F2F2;
+}
+
+.modal-title {
+  font-size: 30px;
+  line-height: 36px;
+
+  margin: 0;
+
+  text-transform: uppercase;
+  margin-bottom: 64px;
+}
+
+.arrival-date {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.departure-date {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.input-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 20px;
+
+  width: 440px;
+
+  border: none;
+  border-radius: 4px;
+  background:  #F2F2F2;
+  box-sizing: border-box;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.wrapper-number-people {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 88px;
+}
+
+.wrapper-number-people .adults {
+  display: flex;
+
+  margin-right: 88px;
+
+  width: 247px;
+
+  margin: 0;
+  padding: 0;
+
+
+  align-items: center;
+  gap: 46px;
+}
+
+.wrapper-number-people .children {
+  display: flex;
+  align-items: center;
+
+
+  width: 242px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.children-title {
+  margin-right: 82px;
+}
+
+.wrapper-number-people-button {
+  display: flex;
+  padding: 14px 10px;
+
+
+  border: none;
+}
+
+.container-number-people {
+  display: flex;
+}
+
+.quantity {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  margin: 0;
+  padding: 14px 10px;
+  width: 31px;
+
+  border: none;
+  outline: none;
+
+  box-sizing: border-box;
+  background: #f2f2f2;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.quantity::-webkit-outer-spin-button,
+.quantity::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+
+
+
+/*Тултип*/
+
+
+.tooltip {
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 2px;
+  width: 16px;
+  height: 16px;
+}
+
+.tooltip-toggle {
+  position: absolute;
+
+  padding: 0;
+  margin: 0;
+
+  top: 6px;
+  left: 390px;
+
+  border: none;
+  background-color: transparent;
+
+  display: block;
+}
+
+
+.tooltip-text {
+  position: absolute;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  font-family: PT Sans;
+
+
+  width: 256px;
+
+  margin: 0;
+  padding: 15px 18px 18px 22px;
+
+  top: 50px;
+  left: 276px;
+
+  color: #ffffff;
+
+  box-sizing: border-box;
+
+  border-radius: 10px;
+  background:  #333;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
+
+  z-index: 1;
+
+  display: none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+
+
 
 /*Каталог*/
 
 .container-main-image {
   background-image: url(../images/background/catalog-background.jpg);
-  background-color:blue;
+  background-color:rgba(131, 179, 211, 1);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -600,7 +847,7 @@ body {
 
   color: #FFFFFF;
 
-  padding: 35px 70px 75px 70px;
+  padding: 35px 70px 70px 70px;
   box-sizing: border-box;
 }
 
@@ -610,6 +857,7 @@ body {
 
   margin: 0;
   margin-bottom: 8px;
+
 }
 
 /*Крошки*/
@@ -619,7 +867,27 @@ body {
 
   margin-top: 0;
   margin-bottom: 40px;
+  padding: 0;
+
+  display: flex;
+  gap: 27px;
+
+  position: relative;
 }
+
+.breadcrumbs::before {
+  position: absolute;
+  content: " ";
+
+  width: 8px;
+  height: 20px;
+
+  background-image: url("../images/breadcrumbs-arrow.svg");
+  background-repeat: no-repeat;
+
+  left: 23px;
+}
+
 .breadcrumbs a {
   text-decoration: none;
   color: #FFFFFF;
@@ -651,6 +919,7 @@ body {
   line-height: 24px;
 
   margin-bottom: 32px;
+  padding: 0;
 
   text-transform: capitalize;
 
@@ -665,6 +934,60 @@ body {
   flex-direction: column;
   gap: 16px;
   list-style:none;
+}
+
+.control {
+  position: relative;
+
+  padding-left: 36px;
+}
+
+/*Инпуты чекбокс*/
+
+.control-mark {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  left: 0;
+
+  border: 1px solid #000000;
+  background-color: #FFFFFF;
+  border-radius: 20%;
+}
+
+.control:hover .control-mark {
+  background-color:  #E5E5E5;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  content: "";
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url(../images/control-checkbox.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*Инпуты радио*/
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  content: "";
 }
 
 /*Фильтр стоимости*/
@@ -688,7 +1011,8 @@ body {
   position: absolute;
   width: 20px;
   height: 20px;
-  border-radius: 30%;
+  border-radius: 20%;
+  border: none;
   cursor: pointer;
 }
 
@@ -708,7 +1032,7 @@ body {
 
 .toggle-max {
   top: -8px;
-  right: -10px;
+  right: -5px;
 }
 
 .range-wrapper-inputs {
@@ -790,6 +1114,8 @@ input {
 
   display: flex;
   justify-content: space-between;
+
+  align-items: center;
 }
 
 .output-wrapper h2 {
@@ -804,7 +1130,7 @@ input {
 
   width: 292px;
   padding: 10px 20px;
-  margin-right: 40px;
+  margin-right: 70px;
 
   display: flex;
   justify-content: space-between;
@@ -813,6 +1139,13 @@ input {
 
   border-radius: 4px;
   border: 2px solid var(--forms-elements-1, #E5E5E5);
+
+  appearance: none;
+
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url(../images/select-control-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 254px 11px;
 }
 
 .button-list {
@@ -849,7 +1182,7 @@ input {
 
   display: grid;
   grid-template-columns: repeat(3, 340px);
-  gap: 20px;
+  gap: 19px;
 
   margin-bottom: 40px;
   padding: 0;
@@ -869,6 +1202,7 @@ input {
 .card-list-title {
   color: #000000;
 }
+
 .card-list-item {
   font-weight: 700;
   font-size: 16px;
@@ -890,11 +1224,49 @@ input {
   box-sizing: border-box;
 }
 
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.rating-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.rating-stars {
+  margin: 0;
+
+  background-image: url('../images/star-one.svg');
+  background-repeat: space;
+
+  align-self: center;
+
+  height: 17px;
+}
+
+.rating-stars-level-four {
+  width: 88px;
+}
+
+.rating-stars-level-three {
+  width: 65px;
+}
+
+.rating-stars-level-two {
+  width: 43px;
+}
+
+
 .card-list-title {
   font-size: 24px;
   line-height: 28px;
 
   text-transform: none;
+  text-align: left;
 
   margin: 16px 0;
 }
@@ -935,6 +1307,7 @@ input {
 
   padding: 8px 18px;
 }
+
 
 .rating {
   font-weight: 400;
@@ -983,7 +1356,7 @@ input {
   box-sizing: border-box;
   padding: 0 12px;
 
-  border: 1px solid black;
+  border: none;
   border-radius: 4px;
 
   text-transform: uppercase;
