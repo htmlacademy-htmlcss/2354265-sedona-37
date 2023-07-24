@@ -358,7 +358,7 @@ body {
   margin-bottom: auto;
 
 
-  font-family: PT Sans;
+  font-family: "PT sans", sans-serif;
 
   line-height: 21px;
 }
@@ -970,7 +970,7 @@ body {
   font-size: 16px;
   line-height: 20px;
 
-  font-family: PT Sans;
+  font-family: "PT sans" sans-serif;
 
 
   width: 256px;
@@ -1000,7 +1000,7 @@ body {
 }
 
 .modal-search-button {
-  font-family: PT Sans;
+  font-family: "PT sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -1349,7 +1349,7 @@ body {
   padding: 8px 50px;
 }
 
-input {
+.container-body input {
   font-family: "PT sans", sans-serif;
 }
 
@@ -1405,7 +1405,7 @@ input {
 }
 
 .select-control {
-  font-family: PT Sans;
+  font-family: "PT sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
 
